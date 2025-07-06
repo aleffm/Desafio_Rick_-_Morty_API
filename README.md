@@ -22,7 +22,10 @@ Independentemente da opção escolhida, o app deve conter:
 # App de Personagens (Rick & Morty API)
 Crie um app que consome a API pública Rick and Morty:
 Funcionalidades esperadas:
-• Lista de personagens com imagem, nome e status
-• Busca por nome
-• Tela de detalhes com informações completas (espécie, origem, localização)
-API base: https://rickandmortyapi.com/api/character
+
+- Lista de personagens com imagem, nome e status
+- Busca por nome
+- Tela de detalhes com informações completas (espécie, origem, localização)
+
+
+- API base: https://rickandmortyapi.com/api/character

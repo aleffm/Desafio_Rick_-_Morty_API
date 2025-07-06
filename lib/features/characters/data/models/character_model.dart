@@ -28,4 +28,14 @@ class Character {
       location: json['location']['name'],
     );
   }
+
+  static Character empty() => Character(
+    id: 0,
+    name: '',
+    status: '',
+    species: '',
+    image: '',
+    origin: '',
+    location: '',
+  );
 }

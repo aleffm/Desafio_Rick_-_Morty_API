@@ -19,7 +19,7 @@ Independentemente da opção escolhida, o app deve conter:
 • Layout organizado e responsivo (dentro do possível)
 
 
-# App de Personagens (Rick & Morty API)
+## App de Personagens (Rick & Morty API)
 Crie um app que consome a API pública Rick and Morty:
 Funcionalidades esperadas:
 

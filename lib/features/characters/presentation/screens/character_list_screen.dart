@@ -21,6 +21,10 @@ class _CharacterListScreenState extends ConsumerState<CharacterListScreen> {
     });
   }
 
+  Future<void> _handleRefresh() async {
+    await ref.read(characterProvider.notifier).fetchCharacters();
+  }
+
   @override
   Widget build(BuildContext context) {
     final characters = ref.watch(characterProvider);
@@ -38,21 +42,29 @@ class _CharacterListScreenState extends ConsumerState<CharacterListScreen> {
             ),
           ),
           Expanded(
-            child: characters.isEmpty
-                ? const Center(child: Text("Nenhum personagem encontrado."))
-                : GridView.builder(
-              padding: const EdgeInsets.all(8),
-              itemCount: characters.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                mainAxisSpacing: 8,
-                crossAxisSpacing: 8,
-                childAspectRatio: 0.7,
+            child: RefreshIndicator(
+              onRefresh: _handleRefresh,
+              child: characters.isEmpty
+                  ? ListView(
+                children: const [
+                  SizedBox(height: 100),
+                  Center(child: Text("Nenhum personagem encontrado.")),
+                ],
+              )
+                  : GridView.builder(
+                padding: const EdgeInsets.all(8),
+                itemCount: characters.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 8,
+                  childAspectRatio: 0.7,
+                ),
+                itemBuilder: (context, index) {
+                  final character = characters[index];
+                  return CharacterCard(character: character);
+                },
               ),
-              itemBuilder: (context, index) {
-                final character = characters[index];
-                return CharacterCard(character: character);
-              },
             ),
           ),
         ],

@@ -22,4 +22,9 @@ class CharacterNotifier extends StateNotifier<List<Character>> {
       state = [];
     }
   }
+
+  // Pull-to-refresh
+  Future<void> loadCharacters() async {
+    await fetchCharacters();
+  }
 }

@@ -10,12 +10,14 @@ class RickAndMortyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Rick and Morty App',
+      title: 'Desafio Rick & Morty',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
+        colorSchemeSeed: Colors.green,
+        fontFamily: 'Roboto',
       ),
       routerConfig: _router,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

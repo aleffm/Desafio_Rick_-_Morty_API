@@ -1,16 +1,31 @@
-# rick_and_morty_app
+## Desafio Técnico – Desenvolvedor Flutter / FlutterFlow 
 
-A new Flutter project.
+Tempo estimado
+• Prazo de entrega: até 07/07/25
+• Duração sugerida: cerca de 6 a 12 horas de trabalho.
 
-## Getting Started
+Tecnologia permitida
+Você pode usar:
+• Flutter
+• FlutterFlow
 
-This project is a starting point for a Flutter application.
+Requisitos comuns a todos os desafios
+Independentemente da opção escolhida, o app deve conter:
+• Pelo menos 2 telas (lista + detalhes, por exemplo)
+• Login persistente
+• Consumo de uma API externa ou estrutura de dados dinâmica
+• Tratamento de loading e erros de requisição
+• Navegação funcional entre telas
+• Layout organizado e responsivo (dentro do possível)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## App de Personagens (Rick & Morty API)
+Crie um app que consome a API pública Rick and Morty:
+Funcionalidades esperadas:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Lista de personagens com imagem, nome e status
+- Busca por nome
+- Tela de detalhes com informações completas (espécie, origem, localização)
+
+
+- API base: https://rickandmortyapi.com/api/character
